@@ -1,0 +1,78 @@
+<html lang="en" ng-app="pxpic">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="picController" ng-cloak>
+
+  <div class="container" layout-margin>
+    <div class="msg">
+      <h1 class="md-display-1">Daily Photo</h1>
+    </div>
+    <div layout-wrap layout-margin layout-padding>
+      <div ng-repeat="detail in details" class="photobox"  layout-align="center" layout="row" layout-xs="column">
+        <div class="imgsize">
+          <a ng-href="{{detail.link}}"><img ng-src="{{detail.image}}"></a>
+        </div>
+        <md-card flex="33" flex-xs="100">
+          <md-card-header>
+            <md-card-avatar>
+              <img class="md-user-avatar" ng-src="{{detail.avatar}}">
+            </md-card-avatar>
+            <md-card-header-text>
+              <span class="author">{{detail.author}}</span>
+            </md-card-header-text>
+          </md-card-header>
+          <md-card-title-text class="cardbox" layout-align="center center" layout='column'>
+            <span class="md-headline ">{{detail.name}}</span>
+            <div layout="row">
+              <span class="md-subhead votes"><md-icon class='miniicon'>trending_up</md-icon> {{detail.rate}}</span>
+              <span class="md-subhead votes"><md-icon class='miniicon'>favorite</md-icon> {{detail.vote}}</span>
+            </div>
+            <div class="info" layout='row' layout-align='center start' layout-wrap>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                ISO: {{detail.iso}}
+              </div>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                Aperature: {{detail.aperature}}
+              </div>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                Shutter: {{detail.shutter}}
+              </div>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                Focal length: {{detail.focal}}
+              </div>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                Camera: {{detail.camera}}
+              </div>
+              <div class="md-item-text md-whiteframe-2dp infotab">
+                Lens: {{detail.lens}}
+              </div>
+            </div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+      </div>
+    </div>
+  </div>
+  <footer>
+    © Kevin Shi 2016
+  </footer>
+  <!-- Angular Material requires Angular.js Libraries -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  <script src="https://rawgit.com/500px/500px-js-sdk/master/500px.js"></script>
+  <script src="test.js"></script>
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+</body>
+</html>
