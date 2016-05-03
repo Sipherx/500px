@@ -17,9 +17,9 @@
     <div layout-wrap layout-margin layout-padding>
       <div ng-repeat="detail in details" class="photobox"  layout-align="center" layout="row" layout-xs="column">
         <div class="imgsize">
-          <a ng-href="{{detail.link}}"><img ng-src="{{detail.image}}"></a>
+          <a ng-href="{{detail.image}}"><img ng-src="{{detail.image}}"></a>
         </div>
-        <md-card flex="33" flex-xs="100">
+        <md-card flex="33" flex-xs="33">
           <md-card-header>
             <md-card-avatar>
               <img class="md-user-avatar" ng-src="{{detail.avatar}}">
