@@ -36,5 +36,7 @@ footer{
   color: #fff;
   padding: 5px;
   text-transform: uppercase;
-
+}
+.cardbox{
+  height: auto;
 }
