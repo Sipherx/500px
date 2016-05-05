@@ -1,0 +1,42 @@
+.msg{
+  text-align: center;
+  color: rgb(255,82,82)
+}
+.imgsize{
+  max-width: 500px !important;
+}
+a img{
+  width: 100%;
+  height: auto;
+}
+.photobox{
+  margin: 10px;
+}
+.info{
+  padding-top: 10px;
+}
+.author{
+  padding-top: 10px;
+}
+.infotab{
+  margin: 6px;
+  padding: 5px;
+  background-color: rgb(255,82,82);
+  color: #fff;
+}
+.votes{
+  padding: 5px;
+}
+.miniicon{
+  color: rgb(255,82,82);
+}
+footer{
+  text-align: center;
+  background-color: rgb(255,82,82);
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.cardbox{
+  height: auto !important;
+}
