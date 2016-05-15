@@ -3,7 +3,7 @@
   color: rgb(255,82,82)
 }
 .imgsize{
-  max-width: 500px !important;
+  max-width: 500px;
 }
 a img{
   width: 100%;
@@ -38,5 +38,15 @@ footer{
   text-transform: uppercase;
 }
 .cardbox{
-  height: auto !important;
+  height: auto ;
+}
+.sorttext{
+  padding-top:13px;
+}
+.md-button.md-raised{
+  color: #fff;
+  background-color: rgb(255,82,82);
+}
+.md-button.md-raised:hover{
+  color: rgb(255,82,82);
 }

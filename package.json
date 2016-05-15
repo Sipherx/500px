@@ -1,0 +1,23 @@
+{
+  "name": "barn",
+  "version": "0.0.0",
+  "description": "Barn CMS Client",
+  "scripts": {
+    "activate" : "echo 'export PATH=$(npm bin):$PATH && export PS1=\"(./node_modules/.bin) \"$PS1'",
+    "dev" : "./node_modules/.bin/live-server --open=index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "live-server": "^0.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/CodeParticle/barn.git"
+  },
+  "author": "",
+  "license": "Copyright (c) Code Particle, Inc - All Rights Reserved",
+  "homepage": "https://bitbucket.org/CodeParticle/barn#readme"
+}

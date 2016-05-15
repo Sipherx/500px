@@ -6,25 +6,31 @@ pxpic.controller('picController', function($scope, fetchData){
   promise.then(function(data){
     var details = [];
     angular.forEach(data, function(item) {
-      var userPhoto = {}
-      userPhoto.image = item.image_url;
-      userPhoto.name = item.name;
-      userPhoto.rate = item.rating;
-      userPhoto.link = 'http://500px.com' + item.url;
-      userPhoto.vote = item.votes_count;
-      userPhoto.camera = item.camera || 'N/A';
-      userPhoto.aperature = item.aperature || 'N/A';
-      userPhoto.lens = item.lens || 'N/A';
-      userPhoto.iso = item.iso || 'N/A';
-      userPhoto.author = item.user.fullname;
-      userPhoto.avatar = item.user.userpic_url;
-      userPhoto.shutter = item.shutter_speed || 'N/A';
-      userPhoto.focal = item.focal_length || 'N/A';
-
+      var userPhoto = {
+      image : item.image_url,
+      name : item.name,
+      rate : item.rating,
+      link : 'http://500px.com' + item.url,
+      vote : item.votes_count,
+      camera : item.camera || 'N/A',
+      aperature : item.aperature || 'N/A',
+      lens : item.lens || 'N/A',
+      iso : item.iso || 'N/A',
+      author : item.user.fullname,
+      avatar : item.user.userpic_url,
+      shutter : item.shutter_speed || 'N/A',
+      focal : item.focal_length || 'N/A'
+      }
       details.push(userPhoto);
     })
     $scope.details = details;
   });
+  
+  $scope.e = '-vote';
+  $scope.order = function(e){
+    $scope.reverse = ($scope.e=e) ? !$scope.reverse : false;
+    $scope.e = e;
+  }
 
 })
 

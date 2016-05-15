@@ -14,8 +14,16 @@
     <div class="msg">
       <h1 class="md-display-1">Daily Photo</h1>
     </div>
+    <div class="sortBox" layout-align='center' layout='row'>
+      <span class="sorttext">Sort by: </span>
+      <md-button class="md-raised" ng-click="order('-rate')">Rating</md-button>
+      <md-button class="md-raised" ng-click="order('-vote')">Votes</md-button>
+    </div>
+    <div class="searchline" layout-align="center" layout="row">
+      <input ng-model="searchText" placeholder="Search">
+    </div>
     <div layout-wrap layout-margin layout-padding>
-      <div ng-repeat="detail in details" class="photobox"  layout-align="center" layout="row" layout-xs="column">
+      <div ng-repeat="detail in details | orderBy: e:reverse | filter: searchText" class="photobox"  layout-align="center" layout="row" layout-xs="column">
         <div class="imgsize">
           <a ng-href="{{detail.image}}"><img ng-src="{{detail.image}}"></a>
         </div>
@@ -61,7 +69,7 @@
     </div>
   </div>
   <footer>
-    © Kevin Shi 2016
+    © Kevin Shi 2016 v1.02
   </footer>
   <!-- Angular Material requires Angular.js Libraries -->
 
